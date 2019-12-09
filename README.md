@@ -8,3 +8,4 @@ The [KITTI semantic segmentation dataset](http://www.cvlibs.net/datasets/kitti/e
 - FCN ResNet50/101 (available through [torchvision.models.segmentation](https://pytorch.org/docs/stable/torchvision/models.html#semantic-segmentation))
 - DeepLabv3 ResNet50/101 (available through [torchvision.models.segmentation](https://pytorch.org/docs/stable/torchvision/models.html#semantic-segmentation))
 - [U-net](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/)
+- [ENet](https://arxiv.org/abs/1606.02147)

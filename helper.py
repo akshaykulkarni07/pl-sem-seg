@@ -46,19 +46,19 @@ class semantic_dataset(data.Dataset):
     
     def __getitem__(self, idx):
         img = cv2.imread(self.img_list[idx])
-        img = cv2.resize(img, (1242, 375))
+        img = cv2.resize(img, (1242, 376))
         mask = None
         if self.split == 'train':
             mask = cv2.imread(self.mask_list[idx], cv2.IMREAD_GRAYSCALE)
-            mask = cv2.resize(mask, (1242, 375))
+            mask = cv2.resize(mask, (1242, 376))
             mask = self.encode_segmap(mask)
-            assert(mask.shape == (375, 1242))
+            assert(mask.shape == (376, 1242))
         
         if self.transform:
             img = self.transform(img)
-            assert(img.shape == (3, 375, 1242))
+            assert(img.shape == (3, 376, 1242))
         else :
-            assert(img.shape == (375, 1242, 3))
+            assert(img.shape == (376, 1242, 3))
         
         if self.split == 'train':
             return img, mask

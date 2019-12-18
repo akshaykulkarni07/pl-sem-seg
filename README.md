@@ -1,4 +1,4 @@
-# pl-sem-seg
+# Semantic Segmentation using PyTorch Lightning
 Repository for implementation and training of semantic segmentation models using PyTorch Lightning
 
 ## Dataset Used

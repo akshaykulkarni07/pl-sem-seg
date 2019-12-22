@@ -6,7 +6,7 @@ from .parts import *
 
 class ENet(nn.Module) :
     def __init__(self, num_classes = 19, encoder_relu = False, decoder_relu = True) : 
-        super().__init__()
+        super(ENet, self).__init__()
         self.initial_block = InitialBlock(3, 16, relu = encoder_relu)
         
         self.downsample1_0 = DownsampleBottleneck(16, 64, return_indices = True, dropout_prob = 0.01, relu = encoder_relu)
